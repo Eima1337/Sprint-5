@@ -17,7 +17,7 @@ class CreateStudentsTable2 extends Migration
             $table->id();
             $table->string('name', 64);
             $table->string('surname', 64);
-            $table->bigInteger('project_id')->unsigned();
+            $table->bigInteger('project_id')->unsigned()->nullable();
             $table->timestamps();
             $table->foreign('project_id')->references('id')->on('projects');
         });
