@@ -9,7 +9,7 @@ class Student extends Model
 {
     use HasFactory;
 
-    public $fillable = ['name', 'surname'];
+    public $fillable = ['name', 'surname', 'project_id'];
 
     public function project(){
         return $this->belongsTo('App\Models\Project');

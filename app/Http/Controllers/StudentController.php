@@ -41,7 +41,7 @@ class StudentController extends Controller
     public function store(Request $request){
         $student = new Student();
         $student->fill($request->all());
-        $student->project_id = $request->project_id;
+        // $student->project_id = $request->project_id;
         $student->save();
         return redirect()->route('students.index');
     }
@@ -77,7 +77,7 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student){
         $student->fill($request->all());
-        $student->project_id = $request->project_id;
+        // $student->project_id = $request->project_id;
         $student->save();
         return redirect()->route('students.index');
     }
